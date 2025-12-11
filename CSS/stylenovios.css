@@ -1,4 +1,28 @@
 /* =============== IMÁGENES ================= */
+/* Imagen cuadrada centrada dentro del aside */
+.aside-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* espacio para el texto debajo */
+}
+
+.aside-img-box img {
+    width: 150px;          /* tamaño base */
+    height: 150px;         /* cuadrada siempre */
+    object-fit: cover;     /* recorta estético */
+    border-radius: 15px;   /* esquinas bonitas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .aside-img-box img {
+        width: 120px;
+        height: 120px;
+    }
+}
 
 
 img, .img, .img_año, .hr_img {
