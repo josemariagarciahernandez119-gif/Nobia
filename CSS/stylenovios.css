@@ -222,3 +222,65 @@ aside:hover {
     }
 
 }
+
+/* ============================================== */
+/*   OPTIMIZACIÓN PARA PANTALLAS VERTICALES (MÓVIL) */
+/* ============================================== */
+
+@media (max-width: 600px) {
+
+    /* El grid principal pasa a una columna */
+    .container-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* Las imágenes NO deben tener tamaño fijo */
+    img,
+    .img,
+    .img_año,
+    .hr_img {
+        width: 100%;
+        height: auto !important;   /* ← ESTO ES CLAVE */
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Secciones más compactas */
+    section {
+        padding: 18px;
+    }
+
+    aside {
+        padding: 18px;
+    }
+
+    /* Ajustar tipografías */
+    nav h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* El layout especial del mes 12 */
+    .mes12-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mes12-layout section,
+    .mes12-layout aside {
+        grid-column: 1 / 2 !important;
+    }
+}
+
