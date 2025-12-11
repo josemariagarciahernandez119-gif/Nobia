@@ -174,3 +174,51 @@ aside:hover {
         max-width: 100%;
     }
 }
+
+@media (max-width: 600px) {
+
+    .container-body {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    aside {
+        padding: 15px;
+    }
+
+    /* Evita que nada se salga de la pantalla */
+    img, .img, .img_año, .hr_img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Hacer títulos más pequeños */
+    nav h1 {
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* El layout de un año en vertical */
+    .mes12-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mes12-layout section {
+        grid-column: 1 / 2;
+    }
+
+}
